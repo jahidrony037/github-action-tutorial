@@ -9,4 +9,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Build Backend Image
-        run: echo ("Building Backend Image")
+        run: echo "Building Backend Image"
