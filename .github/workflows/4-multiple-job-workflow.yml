@@ -1,0 +1,22 @@
+name: Multiple Job Workflow
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  first-workflow-job:
+    runs-on: windows-latest
+    steps:
+      - name: Multiple Jobs Steps
+        run: echo "Print the first job"
+  second-workflow-job:
+    runs-on: windows-latest
+    steps:
+      - name: Multiple Jobs Steps
+        run: echo "Print the second job"
+  third-workflow-job:
+    runs-on: windows-latest
+    steps:
+      - name: Multiple Jobs Steps
+        run: echo "Print the third job"
