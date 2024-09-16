@@ -1,7 +1,7 @@
 name: Dependent Multiple Workflow
 
 on:
-  workflow_dispatches:
+  workflow_dispatch:
 
 jobs:
   first-workflow-job:
