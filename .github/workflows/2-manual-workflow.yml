@@ -1,0 +1,13 @@
+name: Manual Workflow
+
+on:
+  workflow dispatch:
+jobs:
+  manual-workflow:
+    runs-on: windows-latest
+
+    step:
+      - name: First Step
+        run: |
+          echo "Hello World by Manual!"
+          echo "Hello World again!"
