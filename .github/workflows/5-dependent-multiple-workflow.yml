@@ -1,0 +1,36 @@
+name: Dependent Multiple Workflow
+
+on:
+  workflow_dispatches:
+
+jobs:
+  first-workflow-job:
+    runs-on: windows-latest
+
+    steps:
+      - name: First workflow Job
+        run: echo "First job Run able"
+
+  second-workflow-job:
+    runs-on: windows-latest
+    needs:[first-workflow-job]
+
+    steps:
+      - name: Second workflow Job
+        run: echo "Second Job Run able"
+
+  third-workflow-job:
+    runs-on: window-latest
+    needs:[first-workflow-job, second-workflow-job]
+
+    steps:
+      - name: Third workflow Job
+        run: echo "Third Job Run able"
+
+  fourth-workflow-job:
+    runs-on: window-latest
+    needs:[first-workflow-job, second-workflow-job, third-workflow-job]
+
+    steps:
+      - name: Fourth workflow Job
+        run: echo "Fourth Job Run able"     
