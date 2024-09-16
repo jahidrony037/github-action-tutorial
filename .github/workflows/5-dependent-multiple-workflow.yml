@@ -13,7 +13,7 @@ jobs:
 
   second-workflow-job:
     runs-on: windows-latest
-    needs:[first-workflow-job]
+    needs: [first-workflow-job]
 
     steps:
       - name: Second workflow Job
@@ -21,7 +21,7 @@ jobs:
 
   third-workflow-job:
     runs-on: window-latest
-    needs:[first-workflow-job, second-workflow-job]
+    needs: [first-workflow-job, second-workflow-job]
 
     steps:
       - name: Third workflow Job
@@ -29,8 +29,8 @@ jobs:
 
   fourth-workflow-job:
     runs-on: window-latest
-    needs:[first-workflow-job, second-workflow-job, third-workflow-job]
+    needs: [first-workflow-job, second-workflow-job, third-workflow-job]
 
     steps:
       - name: Fourth workflow Job
-        run: echo "Fourth Job Run able"     
+        run: echo "Fourth Job Run able"
