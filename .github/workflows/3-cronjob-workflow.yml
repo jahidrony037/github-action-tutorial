@@ -12,4 +12,4 @@ jobs:
       - name: Cronjob Steps
         run: |
           echo "Hello Cron Job"
-          echo "Hello cron job again!"
+          echo "Hello cron job again test!"
